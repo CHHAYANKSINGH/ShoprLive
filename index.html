@@ -14,6 +14,7 @@
     <style>
         /*Navbar*/
         .btn-custom {
+            font-weight: bold;
             background-color: #F63799;
             border-color: #F63799;
             color: #ffffff;
@@ -36,6 +37,7 @@
         }
 
         .thin-border-button {
+            font-weight: bold;
             border: 1px solid #F63799;
             /* or any color you want */
         }
@@ -140,11 +142,71 @@
         }
 
         /*Today's Deal*/
+        .btn-custom-borderless {
+            color: #F63799;
+            font-weight: bold;
+            font-size: 1.17em;
+        }
+
         .card-img-top {
             height: 200px;
             /* or whatever height you desire */
             object-fit: cover;
             /* this will cover the 200px height and crop if needed */
+        }
+
+        /*Reels*/
+        .profile-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            /* To make it circular */
+            margin-right: 10px;
+            /* Spacing between profile pic and username */
+        }
+
+        .username {
+            color: white;
+            /* Assuming the username text should be white. Adjust as necessary */
+            font-weight: bold;
+        }
+
+        .reel-card {
+            width: 80%;
+            /* Adjust to desired width; this will make it 80% of the column width */
+            padding-bottom: 142.22%;
+            /* Adjusted for 9:16 aspect ratio based on the new width */
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            /* Centers the card within its column */
+            border-radius: 15px;
+            /* Curves the edges */
+        }
+
+        .reel-gif {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the GIF covers the entire div without distorting */
+            border-radius: 15px;
+            /* Matches the curve of the reel-card for consistency */
+        }
+
+        .no-padding {
+            padding-left: 0;
+            padding-right: 0;
         }
 
         /*footer*/
@@ -156,13 +218,15 @@
 </head>
 
 <body>
+    <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="images/shoprlive2.png" alt="" width="60" height="48"></a>
 
             <form class="d-flex w-50" role="search">
                 <div class="input-group ">
-                    <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-1" type="search" placeholder="Search products or brands"
+                        aria-label="Search">
                     <button class="btn btn-outline-custom" type="submit">
                         <i class="fa fa-search"></i>
                     </button>
@@ -300,7 +364,7 @@
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center">
             <h3>Today's Deals</h3>
-            <a href="#" class="btn btn-outline-primary">View All</a>
+            <a href="#" class="btn btn-custom-borderless">View All</a>
         </div>
 
         <div class="row mt-4">
@@ -333,7 +397,7 @@
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center">
             <h3>Great Deals</h3>
-            <a href="#" class="btn btn-outline-primary">View All</a>
+            <a href="#" class="btn btn-custom-borderless">View All</a>
         </div>
 
         <div class="row mt-4">
@@ -362,9 +426,75 @@
             <!-- ... Add more cards as needed ... -->
         </div>
     </div>
+    <!-- Reels Preview Section -->
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <h3>Reels</h3>
+            <a href="#" class="btn btn-custom-borderless">View All</a>
+        </div>
+        <div class="row mt-2">
+            <!-- Reel 1 -->
+            <div class="col-md-3 mb-4 no-padding">
+                <div class="reel-card">
+                    <img src="images/boy.gif" alt="Reel 1" class="reel-gif">
+                    <div class="profile-overlay">
+                        <img src="images/sections/Boys Clothing.png" alt="Profile Picture" class="profile-pic">
+                        <span class="username">Username</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reel 2 -->
+            <div class="col-md-3 mb-4 no-padding">
+                <div class="reel-card">
+                    <img src="images/boy.gif" alt="Reel 1" class="reel-gif">
+                    <div class="profile-overlay">
+                        <img src="images/sections/Boys Clothing.png" alt="Profile Picture" class="profile-pic">
+                        <span class="username">Username</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ... Add more reels as needed ... -->
+
+        </div>
+    </div>
     <!-- Banner Section -->
     <div class="container-fluid  p-0">
-        <img src="images/s31 1.png" alt="Banner" class="responsive-banner">
+        <img src="images/Rectangle 242.png" alt="Banner" class="responsive-banner">
+    </div>
+    <!--Special Deal-->
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <h3>Great Deals</h3>
+            <a href="#" class="btn btn-custom-borderless">View All</a>
+        </div>
+
+        <div class="row mt-4">
+            <!-- Card 1 -->
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal2.jpg" class="card-img-top" alt="Deal 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 2</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ... Add more cards as needed ... -->
+        </div>
     </div>
     <!-- Footer -->
     <footer class="bg-customfooter text-white py-4">
