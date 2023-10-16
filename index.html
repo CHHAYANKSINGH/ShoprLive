@@ -54,33 +54,15 @@
         }
 
         /*Carousel*/
-        /* #carouselExampleControls {
-            padding-top: 56.25%;
-            position: relative;
-        }
-
-        #carouselExampleControls .carousel-inner {
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
+        #mainCarousel img {
             width: 100%;
-        }
-
-        #carouselExampleControls .carousel-item img {
             height: 100%;
-            width: 100%;
+            max-height: 600px;
+            /* You can adjust this as needed */
             object-fit: contain;
-            display: block;
-            margin: 0 auto;
+            object-position: center;
         }
 
-        @media (max-width: 750px) {
-            #carouselExampleControls {
-                height: 20vh;
-            }
-        } */
 
         /*Scrollbar top*/
         .scroll {
@@ -183,7 +165,7 @@
         .reel-card {
             width: 80%;
             /* Adjust to desired width; this will make it 80% of the column width */
-            padding-bottom: 142.22%;
+            padding-bottom: 100%;
             /* Adjusted for 9:16 aspect ratio based on the new width */
             position: relative;
             overflow: hidden;
@@ -210,10 +192,32 @@
             padding-right: 0;
         }
 
+        @media (max-width: 576px) {
+            .reel-card {
+                width: 90%;
+            }
+
+            .profile-pic {
+                width: 30px;
+                /* adjust as needed */
+                height: 30px;
+                /* adjust as needed */
+            }
+
+            .username {
+                font-size: 0.8rem;
+                /* adjust as needed */
+            }
+        }
+
         /*footer*/
         .bg-customfooter {
             background-color: #16243A;
             ;
+        }
+
+        footer a {
+            text-decoration: none;
         }
     </style>
 </head>
@@ -222,7 +226,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="images/image 1.png" alt="" width="60" height="48"></a>
+            <a class="navbar-brand" href="#"><img src="images/image 1.png" alt="" width="60" height="60"></a>
 
             <form class="d-flex w-50" role="search">
                 <div class="input-group ">
@@ -336,31 +340,48 @@
                 <img src="images/sections/Kids Footwear.png" alt="Button 2" class="rounded-circle img-button">
                 <div class="label">Kids Shoes</div>
             </button>
+            <button class="btn img-button-container">
+                <img src="images/sections/Sports (1).png" alt="Button 1" class="rounded-circle img-button">
+                <div class="label">Sports wear</div>
+            </button>
+            <button class="btn img-button-container">
+                <img src="images/sections/Boys Clothing.png" alt="Button 1" class="rounded-circle img-button">
+                <div class="label">Kids fashion</div>
+            </button>
+            <button class="btn img-button-container">
+                <img src="images/sections/Electronics.png" alt="Button 1" class="rounded-circle img-button">
+                <div class="label">Electronics</div>
+            </button>
+
             <!-- ... Add more buttons as needed ... -->
         </div>
     </div>
     <!-- Banner Section -->
-    <div class="container-fluid  p-0">
-        <img src="images/s31 1.png" alt="Banner" class="responsive-banner">
-    </div>
+    <!--<div class="container-fluid  p-0">
+        <img src="images/Hero Banner1.jpg" alt="Banner" class="responsive-banner">
+    </div>-->
     <!--Carousel-->
-    <!--<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/s31 1.png" class="img-fluid" alt="...">
+                <img src="images/Hero Banner1.jpg" class="d-block w-100" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Hero Banner2.jpg" class="d-block w-100" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Hero Banner3.jpg" class="d-block w-100" alt="Third slide">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>-->
+    </div>
     <!--Today's Deal-->
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center">
@@ -380,16 +401,39 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
+            <!-- Card 1 -->
             <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
                 <div class="card">
-                    <img src="images/deal2.jpg" class="card-img-top" alt="Deal 2">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
                     <div class="card-body">
-                        <h5 class="card-title">Deal Title 2</h5>
+                        <h5 class="card-title">Deal Title 1</h5>
                         <p class="card-text">Deal description here.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Card 1 -->
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
 
             <!-- ... Add more cards as needed ... -->
         </div>
@@ -413,12 +457,78 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
+            <!-- Card 1 -->
             <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
                 <div class="card">
-                    <img src="images/deal2.jpg" class="card-img-top" alt="Deal 2">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
                     <div class="card-body">
-                        <h5 class="card-title">Deal Title 2</h5>
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
                         <p class="card-text">Deal description here.</p>
                     </div>
                 </div>
@@ -427,15 +537,20 @@
             <!-- ... Add more cards as needed ... -->
         </div>
     </div>
-    <!-- Reels Preview Section -->
+
+    <!-- Banner Section -->
+    <div class="container-fluid  p-0">
+        <img src="images/Rectangle 242.png" alt="Banner" class="responsive-banner">
+    </div>
+    <!--Trending live-->
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center">
-            <h3>Reels</h3>
+            <h3>Trending Lives</h3>
             <a href="#" class="btn btn-custom-borderless">View All</a>
         </div>
         <div class="row mt-2">
             <!-- Reel 1 -->
-            <div class="col-md-3 mb-4 no-padding">
+            <div class="col-6 col-md-3 mb-2 no-padding">
                 <div class="reel-card">
                     <img src="images/boy.gif" alt="Reel 1" class="reel-gif">
                     <div class="profile-overlay">
@@ -446,7 +561,7 @@
             </div>
 
             <!-- Reel 2 -->
-            <div class="col-md-3 mb-4 no-padding">
+            <div class="col-6 col-md-3 mb-2 no-padding">
                 <div class="reel-card">
                     <img src="images/boy.gif" alt="Reel 1" class="reel-gif">
                     <div class="profile-overlay">
@@ -456,14 +571,92 @@
                 </div>
             </div>
 
+            <!-- Reel 2 -->
+            <div class="col-6 col-md-3 mb-2 no-padding">
+                <div class="reel-card">
+                    <img src="images/boy.gif" alt="Reel 1" class="reel-gif">
+                    <div class="profile-overlay">
+                        <img src="images/sections/Boys Clothing.png" alt="Profile Picture" class="profile-pic">
+                        <span class="username">Username</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reel 2 -->
+            <div class="col-6 col-md-3 mb-2 no-padding">
+                <div class="reel-card">
+                    <img src="images/boy.gif" alt="Reel 1" class="reel-gif">
+                    <div class="profile-overlay">
+                        <img src="images/sections/Boys Clothing.png" alt="Profile Picture" class="profile-pic">
+                        <span class="username">Username</span>
+                    </div>
+                </div>
+            </div>
+
+
             <!-- ... Add more reels as needed ... -->
 
         </div>
     </div>
-    <!-- Banner Section -->
-    <div class="container-fluid  p-0">
-        <img src="images/Rectangle 242.png" alt="Banner" class="responsive-banner">
+
+    <!-- Reels Preview Section -->
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <h3>Reels</h3>
+            <a href="#" class="btn btn-custom-borderless">View All</a>
+        </div>
+        <div class="row mt-2">
+            <!-- Reel 1 -->
+            <div class="col-6 col-md-3 mb-2 no-padding">
+                <div class="reel-card">
+                    <img src="images/boy.gif" alt="Reel 1" class="reel-gif">
+                    <div class="profile-overlay">
+                        <img src="images/sections/Boys Clothing.png" alt="Profile Picture" class="profile-pic">
+                        <span class="username">Username</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reel 2 -->
+            <div class="col-6 col-md-3 mb-2 no-padding">
+                <div class="reel-card">
+                    <img src="images/boy.gif" alt="Reel 1" class="reel-gif">
+                    <div class="profile-overlay">
+                        <img src="images/sections/Boys Clothing.png" alt="Profile Picture" class="profile-pic">
+                        <span class="username">Username</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reel 2 -->
+            <div class="col-6 col-md-3 mb-2 no-padding">
+                <div class="reel-card">
+                    <img src="images/boy.gif" alt="Reel 1" class="reel-gif">
+                    <div class="profile-overlay">
+                        <img src="images/sections/Boys Clothing.png" alt="Profile Picture" class="profile-pic">
+                        <span class="username">Username</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reel 2 -->
+            <div class="col-6 col-md-3 mb-2 no-padding">
+                <div class="reel-card">
+                    <img src="images/boy.gif" alt="Reel 1" class="reel-gif">
+                    <div class="profile-overlay">
+                        <img src="images/sections/Boys Clothing.png" alt="Profile Picture" class="profile-pic">
+                        <span class="username">Username</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ... Add more reels as needed ... -->
+
+        </div>
     </div>
+
+
     <!--Special Deal-->
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center">
@@ -484,11 +677,73 @@
             </div>
 
             <!-- Card 2 -->
+
+
             <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
                 <div class="card">
-                    <img src="images/deal2.jpg" class="card-img-top" alt="Deal 2">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
                     <div class="card-body">
-                        <h5 class="card-title">Deal Title 2</h5>
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
+                        <p class="card-text">Deal description here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4  d-flex align-items-stretch">
+                <div class="card">
+                    <img src="images/deal1.jpg" class="card-img-top" alt="Deal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Deal Title 1</h5>
                         <p class="card-text">Deal description here.</p>
                     </div>
                 </div>
@@ -500,7 +755,7 @@
     <!-- Footer -->
     <footer class="bg-customfooter text-white py-4">
         <div class="container">
-            <div class="row">
+            <div class="row footer">
                 <!-- Social Media -->
                 <div class="col-md-3 col-sm-6">
                     <h5>Need Help</h5>
@@ -515,6 +770,7 @@
                     <a href="#" class="text-white me-3"><i class="fa fa-facebook-square fa-2x"></i></a>
                     <a href="#" class="text-white me-3"><i class="fa fa-twitter-square fa-2x"></i></a>
                     <a href="#" class="text-white me-3"><i class="fa fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fa fa-youtube-play fa-2x"></i></a>
                 </div>
 
                 <!--Company-->
@@ -550,7 +806,14 @@
                         maharashtra 401107
                     </address>
                     <h5 class="mt-3">Download Our App</h5>
-                    <button class="btn btn-light">Download</button>
+                    <a href="#">
+                        <img src="images/playstore.png" alt="App Photo" class="img-fluid"
+                            style="width: 100px; height: auto;">
+                    </a>
+                    <a href="#">
+                        <img src="images/appstore.png" alt="App Photo" class="img-fluid"
+                            style="width: 100px; height: auto;">
+                    </a>
                 </div>
             </div>
             <hr class="bg-white">
@@ -561,6 +824,40 @@
             </div>
         </div>
     </footer>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1">
+                <!-- Dropdown button -->
+                <div class="btn-group w-100">
+                    <button type="button"
+                        class="btn btn-lg btn-light text-dark border border-dark w-100 dropdown-toggle"
+                        data-bs-display="static" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown Button
+                    </button>
+                    <div class="dropdown-menu p-4" style="width: 100%;">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+                            Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis
+                            sagittis ipsum.
+                            Praesent mauris. Fusce nec tellus sed augue semper porta.
+                        </p>
+                        <p>
+                            Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+                            torquent per conubia nostra,
+                            per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
+                        </p>
+                        <!-- Add more paragraphs as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="bg-white">
+    <div class="row">
+        <div class="col-12 text-center">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+    </div>
     <!-- Footer -->
     <!-- Optional JavaScript; choose one of the two! -->
 
